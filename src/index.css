@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-anek: 'Anek Bangla', system-ui, -apple-system, sans-serif;
+    --font-siliguri: 'Hind Siliguri', system-ui, -apple-system, sans-serif;
+    --font-galada: 'Galada', cursive, serif;
+    --font-sans: 'Plus Jakarta Sans', 'Hind Siliguri', system-ui, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-siliguri);
+    background-color: #110703;
+    color: #f7efe6;
+    overflow-x: hidden;
+  }
+}
+
+.font-anek {
+  font-family: 'Anek Bangla', system-ui, sans-serif;
+}
+
+.font-siliguri {
+  font-family: 'Hind Siliguri', system-ui, sans-serif;
+}
+
+.font-galada {
+  font-family: 'Galada', cursive, serif;
+}
+
+.font-display {
+  font-family: 'Anek Bangla', 'Hind Siliguri', system-ui, sans-serif;
+}
+
+/* Responsive Hero Background CSS Media Query */
+.hero-bg-responsive {
+  background-image: url('/hero-9x16-mobile.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .hero-bg-responsive {
+    background-image: url('/hero-16x9-pc.jpg');
+    background-position: center 35%;
+  }
+}
+
+/* Animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes steam-rise {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-8px) scaleX(1.2);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-16px) scaleX(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes equalizer-1 {
+  0%, 100% { height: 4px; }
+  50% { height: 18px; }
+}
+@keyframes equalizer-2 {
+  0%, 100% { height: 16px; }
+  50% { height: 6px; }
+}
+@keyframes equalizer-3 {
+  0%, 100% { height: 8px; }
+  50% { height: 20px; }
+}
+@keyframes equalizer-4 {
+  0%, 100% { height: 14px; }
+  50% { height: 5px; }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 14s linear infinite;
+}
+
+.animate-steam {
+  animation: steam-rise 2.5s ease-out infinite;
+}
+
+.eq-bar-1 { animation: equalizer-1 0.8s ease-in-out infinite; }
+.eq-bar-2 { animation: equalizer-2 0.7s ease-in-out infinite 0.15s; }
+.eq-bar-3 { animation: equalizer-3 0.9s ease-in-out infinite 0.3s; }
+.eq-bar-4 { animation: equalizer-4 0.6s ease-in-out infinite 0.45s; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #180a04;
+}
+::-webkit-scrollbar-thumb {
+  background: #542c15;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #874620;
+}
+

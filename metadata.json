@@ -1,0 +1,6 @@
+{
+  "name": "buswala.online",
+  "description": "চায়ের দোকান — Nostalgic Bangladeshi tea-stall roadside radio streaming timeless tracks with live listener presence and smooth interactive player.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
